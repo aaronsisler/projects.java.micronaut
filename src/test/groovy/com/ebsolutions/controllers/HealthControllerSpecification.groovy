@@ -1,5 +1,6 @@
 package com.ebsolutions.controllers
 
+import io.micronaut.http.HttpStatus
 import spock.lang.Specification
 
 class HealthControllerSpecification extends Specification {
@@ -8,9 +9,9 @@ class HealthControllerSpecification extends Specification {
         HealthController healthController = new HealthController();
 
         when: "it is invoked"
-        String response = healthController.index()
+        HttpStatus response = healthController.index()
 
         then: "the it should return the correct response"
-        response == "UP"
+        response == HttpStatus.OK
     }
 }
