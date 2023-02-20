@@ -2,6 +2,7 @@ plugins {
     id("groovy")
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("io.micronaut.application") version "3.7.0"
+    id("com.gradle.enterprise") version("3.9")
 }
 
 version = "0.1"
@@ -23,9 +24,7 @@ dependencies {
     testImplementation("org.spockframework:spock-core") {
         exclude group: "org.codehaus.groovy", module: "groovy-all"
     }
-
 }
-
 
 application {
     mainClass.set("com.ebsolutions.Application")
@@ -46,7 +45,15 @@ micronaut {
     }
 }
 
-
+gradleEnterprise {
+    if (System.getenv("CI") != null) {
+        buildScan {
+            publishAlways()
+            termsOfServiceUrl = "https://gradle.com/terms-of-service"
+            termsOfServiceAgree = "yes"
+        }
+    }
+}
 
 
 
