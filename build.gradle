@@ -23,9 +23,7 @@ dependencies {
     testImplementation("org.spockframework:spock-core") {
         exclude group: "org.codehaus.groovy", module: "groovy-all"
     }
-
 }
-
 
 application {
     mainClass.set("com.ebsolutions.Application")
@@ -45,8 +43,3 @@ micronaut {
         annotations("com.ebsolutions.*")
     }
 }
-
-
-
-
-

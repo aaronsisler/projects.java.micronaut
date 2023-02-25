@@ -11,7 +11,7 @@ class PaperTrailSpec extends Specification {
     @Inject
     EmbeddedApplication<?> application
 
-    void 'test it works'() {
+    void 'test main application can starts correctly'() {
         expect:
         application.running
     }
