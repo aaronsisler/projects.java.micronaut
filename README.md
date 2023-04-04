@@ -1,14 +1,15 @@
-## Micronaut 3.8.4 Documentation
+# Micronaut POC for Paper Trail
 
-- [User Guide](https://docs.micronaut.io/3.8.4/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.8.4/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.8.4/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+## Local
 
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature http-client documentation
+Runs clean and build.
 
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+```bash
+./gradlew clean build
+```
 
+Runs clean, build, and test. Generates the HTML report in build/reports/tests/test/index.html
 
+```bash
+./gradlew clean test
+```
