@@ -13,5 +13,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: Init Gradle
         run: gradle init
+      - name: what files
+        run: ls
       - name: Run build with Gradle Wrapper
         run: ./gradlew clean build
